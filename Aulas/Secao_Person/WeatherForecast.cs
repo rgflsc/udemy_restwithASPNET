@@ -1,6 +1,6 @@
 using System;
 
-namespace Secao07
+namespace Secao_Person
 {
     public class WeatherForecast
     {

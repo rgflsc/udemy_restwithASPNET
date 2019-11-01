@@ -10,8 +10,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Secao_Person.Services;
+using Secao_Person.Services.Implementations;
 
-namespace Secao07
+namespace Secao_Person
 {
     public class Startup
     {
@@ -26,6 +28,8 @@ namespace Secao07
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddScoped<IPersonService, PersonServiceImpl>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

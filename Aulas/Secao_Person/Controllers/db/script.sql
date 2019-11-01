@@ -1,0 +1,7 @@
+CREATE TABLE `person` (
+  `ID` int(10) unsigned DEFAULT NULL,
+  `FIRSTNAME` varchar(50) DEFAULT NULL,
+  `LASTNAME` varchar(50) DEFAULT NULL,
+  `ADDRESS` varchar(50) DEFAULT NULL,
+  `GENDER` varchar(50) DEFAULT NULL
+) ENGINE=InnoD

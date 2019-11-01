@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace Secao07.Controllers
+namespace Secao_Person.Controllers
 {
     [ApiController]
     [Route("[controller]")]
