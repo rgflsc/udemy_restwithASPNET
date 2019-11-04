@@ -1,7 +1,8 @@
 CREATE TABLE `person` (
-  `ID` int(10) unsigned DEFAULT NULL,
+  `ID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `FIRSTNAME` varchar(50) DEFAULT NULL,
   `LASTNAME` varchar(50) DEFAULT NULL,
   `ADDRESS` varchar(50) DEFAULT NULL,
-  `GENDER` varchar(50) DEFAULT NULL
-) ENGINE=InnoD
+  `GENDER` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB A
