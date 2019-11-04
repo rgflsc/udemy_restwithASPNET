@@ -35,6 +35,8 @@ namespace Secao_Person
 
             services.AddControllers();
 
+            services.AddApiVersioning();
+
             services.AddScoped<IPersonService, PersonServiceImpl>();
         }
 

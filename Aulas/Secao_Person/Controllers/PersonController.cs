@@ -4,8 +4,9 @@ using Secao_Person.Services;
 
 namespace Secao_Person.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [ApiVersion("1")]
+    [Route("api/[controller]/v{version:apiVersion}")]
     public class PersonController : ControllerBase
     {
         private IPersonService _personService;
