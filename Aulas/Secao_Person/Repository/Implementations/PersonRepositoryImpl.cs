@@ -4,13 +4,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Secao_Person.Services.Implementations
+namespace Secao_Person.Repository.Implementations
 {
-    public class PersonServiceImpl : IPersonService
+    public class PersonRepositoryImpl : IPersonRepository
     {
         private MySqlContext _context;
 
-        public PersonServiceImpl(MySqlContext context)
+        public PersonRepositoryImpl(MySqlContext context)
         {
             _context = context;
         }
@@ -58,7 +58,7 @@ namespace Secao_Person.Services.Implementations
             return person;
         }
 
-        private bool Exist(long id)
+        public bool Exist(long? id)
         {
             return _context.Person.Any(p => p.Id.Equals(id));
         }

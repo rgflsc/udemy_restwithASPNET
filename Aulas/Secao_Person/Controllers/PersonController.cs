@@ -9,8 +9,8 @@ namespace Secao_Person.Controllers
     [Route("api/[controller]/v{version:apiVersion}")]
     public class PersonController : ControllerBase
     {
-        private IPersonService _personService;
-        public PersonController(IPersonService personService) => _personService = personService;
+        private IPersonBusiness _personService;
+        public PersonController(IPersonBusiness personService) => _personService = personService;
 
         // GET: api/Person
         [HttpGet]

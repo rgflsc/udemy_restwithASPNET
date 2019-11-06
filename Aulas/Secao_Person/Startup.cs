@@ -37,7 +37,7 @@ namespace Secao_Person
 
             services.AddApiVersioning();
 
-            services.AddScoped<IPersonService, PersonServiceImpl>();
+            services.AddScoped<IPersonBusiness, PersonBusinessImpl>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
