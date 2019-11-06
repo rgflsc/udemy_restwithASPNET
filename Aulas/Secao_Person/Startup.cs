@@ -11,9 +11,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Secao_Person.Business;
+using Secao_Person.Business.Implementations;
 using Secao_Person.Model.Context;
-using Secao_Person.Services;
-using Secao_Person.Services.Implementations;
+using Secao_Person.Repository;
+using Secao_Person.Repository.Implementations;
 
 namespace Secao_Person
 {
@@ -38,6 +40,7 @@ namespace Secao_Person
             services.AddApiVersioning();
 
             services.AddScoped<IPersonBusiness, PersonBusinessImpl>();
+            services.AddScoped<IPersonRepository, PersonRepositoryImpl>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Secao_Person.Business;
 using Secao_Person.Model;
-using Secao_Person.Services;
 
 namespace Secao_Person.Controllers
 {
