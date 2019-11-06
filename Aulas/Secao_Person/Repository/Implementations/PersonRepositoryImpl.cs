@@ -40,7 +40,7 @@ namespace Secao_Person.Repository.Implementations
         {
             if (!Exist(person.Id))
             {
-                return new PersonModel();
+                return null;
             }
 
             var result = _context.Person.SingleOrDefault(p => p.Id.Equals(person.Id));

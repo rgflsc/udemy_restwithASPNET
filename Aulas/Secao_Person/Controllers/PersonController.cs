@@ -36,15 +36,17 @@ namespace Secao_Person.Controllers
             return new ObjectResult(_personService.Create(person));
         }
 
-        // PUT: api/Person/5
-        [HttpPut("{id}")]
+        // PUT: api/Person
+        [HttpPut]
         public IActionResult Put([FromBody] PersonModel person)
         {
             if (person == null) return BadRequest();
-            return new ObjectResult(_personService.Update(person));
+            var updatePerson = _personService.Update(person);
+            if (updatePerson == null) return BadRequest();
+            return new ObjectResult(updatePerson);
         }
 
-        // DELETE: api/ApiWithActions/5
+        // DELETE: api/Person/5
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
